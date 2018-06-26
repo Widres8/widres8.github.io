@@ -637,3 +637,10 @@ hr {
     margin: 0.25rem 0;
     border-top: 2px solid rgb(255, 255, 255);
 }
+
+.collapse.show {
+    background-color: #18273B;
+    -webkit-transition: background-color 100ms ease-in;
+    -ms-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
