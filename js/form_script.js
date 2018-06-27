@@ -10,8 +10,7 @@
     $.fn.initForm = function(options) {
 
         var settings = $.extend({
-            type: 'post',
-            serverUrl: "https://api.sparkpost.com/api/v1/transmissions",
+            loaderContact: this.find('.loader-contact'),
             successClean: this.find('.form-success-clean'),
             successGone: this.find('.form-success-gone'),
             successInvisible: this.find('.form-success-invisible'),
@@ -21,6 +20,10 @@
 
         var $ajax = {
             sendRequest: function(p) {
+                settings.loaderContact
+                    .addClass('visible')
+                    .removeClass('invisible');
+
                 var form_fill = $(p);
 
                 // Get the form data.
@@ -39,9 +42,20 @@
 
                 emailjs.send('gmail-widres', 'template_sIdSKKNP', templateParams)
                     .then(function(response) {
-                        console.log('SUCCESS!', response.status, response.text);
+                        // console.log('SUCCESS!', response.status, response.text);
+                        settings.successClean.val("");
+                        settings.successInvisible.addClass('invisible');
+                        settings.successGone.addClass('gone');
+                        settings.successVisible.removeClass('invisible');
+                        settings.successVisible.removeClass('gone');
+                        settings.loaderContact
+                            .addClass('invisible')
+                            .removeClass('visible');
                     }, function(error) {
                         console.log('FAILED...', error);
+                        settings.loaderContact
+                            .addClass('invisible')
+                            .removeClass('visible');
                     });
             }
 
