@@ -16,20 +16,6 @@
         }
     });
 
-    // Scroll to fullPage.js next/previous section
-    // $('.scrolldown a, .scroll.down').on('click', function() {
-    //     try {
-    //         // fullpage scroll
-    //         $.fn.fullpage.moveSectionDown();
-    //     } catch (error) {
-    //         // normal scroll
-    //         $('html, body').animate({
-    //             scrollTop: window.innerHeight
-    //         }, 400, function() {});
-    //     }
-
-    // });
-
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {
         $('.navbar-collapse').collapse('hide');
@@ -39,6 +25,22 @@
     $('body').scrollspy({
         target: '#sideNav'
     });
+
+    // init contact form
+    var sendMessageForm = $('.send_message_form');
+    // Default server url
+    var messageServerUrl = 'https://api.sparkpost.com/api/v1/transmissions';
+
+    // Use form define action attribute
+    if (sendMessageForm.attr('action') && (sendMessageForm.attr('action') != '')) {
+        messageServerUrl = sendMessageForm.attr('action');
+    }
+
+    sendMessageForm.initForm({
+        serverUrl: messageServerUrl,
+    });
+
+    // loader
     var contextWindow = $(window);
 
     contextWindow.on('load', function() {

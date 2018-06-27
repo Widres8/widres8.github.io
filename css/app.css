@@ -575,6 +575,42 @@ p {
     }
 }
 
+.btn-white {
+    color: #D1335B;
+    border: 1px solid transparent;
+    background-color: #ffffff;
+    font-weight: bold;
+}
+
+.btn-white.active,
+.btn-white:active {
+    color: #D1335B;
+    background-color: #d6d6d6;
+}
+
+.btn-white:hover,
+.btn-white:focus {
+    color: #D1335B;
+    background-color: #d6d6d6;
+    border-color: #d6d6d6;
+}
+
+.btn-white.disabled,
+.btn-white:disabled {
+    color: #D1335B;
+    opacity: 0.7;
+    background-color: #d6d6d6;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.btn-bg:hover {
+    background-color: #ffc107;
+    color: #fff;
+}
+
 
 /*--------------------------------------------Layouts----------------------------------------------*/
 
@@ -744,4 +780,187 @@ hr {
 .scrolldown a:hover:before {
     bottom: 38px;
     background: #ffffff;
+}
+
+
+/*------------------------------------- Contact -----------------------------------------------------*/
+
+.form-group {
+    position: relative;
+}
+
+.form-group label.error {
+    position: absolute;
+    font-family: "Open Sans", "Proxima Nova ", "Segoe UI", "Opensans", "Roboto", "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    color: #ffffff;
+    font-size: 12px;
+    top: 4px;
+    bottom: auto;
+    right: 0;
+    text-align: right;
+    padding-right: 8px;
+    width: auto;
+    z-index: -1;
+}
+
+.form-control-line {
+    display: block;
+    width: 100%;
+    border: none;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    border-bottom: 2px solid #fff;
+    color: inherit;
+    border-radius: 0;
+}
+
+.form-control-line:focus {
+    color: inherit;
+    background: none;
+    border-color: #ffc107;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control-line.form-control-primary {
+    border-bottom-color: #fff;
+}
+
+.form-control-line.form-control-primary:focus {
+    border-color: #ffc107;
+}
+
+.form-control-line.form-control-primary.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23D1335B' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-control-line.form-control-secondary {
+    border-bottom-color: #3f4b62;
+}
+
+.form-control-line.form-control-secondary:focus {
+    border-color: #2b3343;
+}
+
+.form-control-line.form-control-secondary.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%233f4b62' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-control-line.form-control-white {
+    border-bottom-color: #ffffff;
+}
+
+.form-control-line.form-control-white:focus {
+    border-color: #adadad;
+}
+
+.form-control-line.form-control-white.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-control-line.form-control-black {
+    border-bottom-color: #1d1d1d;
+}
+
+.form-control-line.form-control-black:focus {
+    border-color: #141414;
+}
+
+.form-control-line.form-control-black.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%231d1d1d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-text-feedback {
+    position: relative;
+    font-size: 1rem;
+    height: 1.5em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    -webkit-transition: 0.15s;
+    transition: 0.15s;
+}
+
+.form-text-feedback.invisible {
+    height: 0;
+}
+
+.form-control-outline {
+    display: block;
+    width: 100%;
+    border: 1px solid #fff;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    color: inherit;
+}
+
+.form-control-outline.thick {
+    border-width: 2px;
+}
+
+.form-control-outline:focus {
+    color: inherit;
+    border-color: #ffc107;
+    background: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.form-control-outline.form-control-primary {
+    border-color: #D1335B;
+}
+
+.form-control-outline.form-control-primary:focus {
+    border-color: #8e233e;
+}
+
+.form-control-outline.form-control-primary.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23D1335B' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-control-outline.form-control-secondary {
+    border-color: #3f4b62;
+}
+
+.form-control-outline.form-control-secondary:focus {
+    border-color: #2b3343;
+}
+
+.form-control-outline.form-control-secondary.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%233f4b62' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-control-outline.form-control-white {
+    border-color: #ffffff;
+}
+
+.form-control-outline.form-control-white:focus {
+    border-color: #adadad;
+}
+
+.form-control-outline.form-control-white.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%23ffffff' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
+}
+
+.form-control-outline.form-control-black {
+    border-color: #1d1d1d;
+}
+
+.form-control-outline.form-control-black:focus {
+    border-color: #141414;
+}
+
+.form-control-outline.form-control-black.custom-select {
+    background: transparent url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 4 5'%3E%3Cpath fill='%231d1d1d' d='M2 0L0 2h4zm0 5L0 3h4z'/%3E%3C/svg%3E") no-repeat right 0.75rem center;
+    background-size: 8px 10px;
 }
