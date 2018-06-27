@@ -474,6 +474,12 @@ p {
     margin: 0.75rem 0;
 }
 
+@media (max-width: 480px) {
+    .section-content img.logo {
+        display: none;
+    }
+}
+
 @media (min-width: 576px) {
     .section-content img.logo {
         height: 200px;
@@ -585,6 +591,7 @@ section.resume-section {
     padding-top: 5rem !important;
     padding-bottom: 5rem !important;
     color: #fff;
+    position: relative;
 }
 
 section.resume-section .resume-item .resume-date {
@@ -608,7 +615,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .list-icons {
-    font-size: 3rem;
+    font-size: 2.5rem;
 }
 
 .list-icons .list-inline-item i:hover {
@@ -617,7 +624,7 @@ section.resume-section .resume-item .resume-date {
 }
 
 .media {
-    min-height: 150px;
+    min-height: 120px;
 }
 
 .media .icon {
@@ -643,4 +650,96 @@ hr {
     -webkit-transition: background-color 100ms ease-in;
     -ms-transition: background-color 100ms ease-in;
     transition: background-color 100ms ease-in;
+}
+
+.scrolldown {
+    position: absolute;
+    bottom: 0;
+    top: auto;
+    right: auto;
+    margin-bottom: 32px;
+    left: 90%;
+    font-family: "Open Sans", "Proxima Nova ", "Segoe UI", "Opensans", "Roboto", "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    z-index: 2;
+    background: transparent;
+}
+
+@media (max-width: 768px) {
+    .scrolldown {
+        display: none;
+    }
+}
+
+@media (max-height: 480px) {
+    .scrolldown {
+        display: none;
+    }
+}
+
+.scrolldown a {
+    margin-left: 0;
+    position: relative;
+    display: block;
+    font-size: 0.75rem;
+    font-family: "Open Sans", "Proxima Nova ", "Segoe UI", "Opensans", "Roboto", "Helvetica", -apple-system, system-ui, BlinkMacSystemFont, sans-serif;
+    line-height: 1;
+    padding: 8px 8px;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+    color: #fff;
+    background: transparent;
+    border: none;
+}
+
+.scrolldown a .txt {
+    position: absolute;
+    width: 200px;
+    text-align: center;
+    left: -100px;
+    top: 0;
+}
+
+.scrolldown a:after {
+    position: absolute;
+    content: "";
+    bottom: 30px;
+    right: 0;
+    height: 34px;
+    width: 18px;
+    margin-right: 9px;
+    border-radius: 40px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    background: transparent;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.scrolldown a:before {
+    position: absolute;
+    content: "";
+    bottom: 54px;
+    right: 0;
+    height: 4px;
+    width: 4px;
+    margin-right: 16px;
+    border-radius: 40px;
+    background: white;
+    -webkit-transition: 0.3s;
+    transition: 0.3s;
+}
+
+.scrolldown a:hover {
+    color: #FFC107;
+}
+
+.scrolldown a:hover:before {
+    bottom: 38px;
+    background: #ffffff;
+}
+
+.container-fluid {
+    height: 100%;
+    position: relative;
+    touch-action: none;
+    transform: translate3d(0px, 0px, 0px);
 }

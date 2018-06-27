@@ -16,6 +16,20 @@
         }
     });
 
+    // Scroll to fullPage.js next/previous section
+    // $('.scrolldown a, .scroll.down').on('click', function() {
+    //     try {
+    //         // fullpage scroll
+    //         $.fn.fullpage.moveSectionDown();
+    //     } catch (error) {
+    //         // normal scroll
+    //         $('html, body').animate({
+    //             scrollTop: window.innerHeight
+    //         }, 400, function() {});
+    //     }
+
+    // });
+
     // Closes responsive menu when a scroll trigger link is clicked
     $('.js-scroll-trigger').click(function() {
         $('.navbar-collapse').collapse('hide');
