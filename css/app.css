@@ -1,11 +1,3 @@
-/* 0. Base style */
-
-
-/* 0.1 Initializer */
-
-
-/* 0.0 Tag/Classes Initailization */
-
 audio,
 canvas,
 img,
@@ -82,10 +74,14 @@ p {
 }
 
 
-/*------------------------------------------------------------------------------------------*/
+/*------------------------------------- Menu -----------------------------------------------------*/
 
-
-/* 1.4 Menu / menu-header / nav */
+.collapse.show {
+    background-color: #18273B;
+    -webkit-transition: background-color 100ms ease-in;
+    -ms-transition: background-color 100ms ease-in;
+    transition: background-color 100ms ease-in;
+}
 
 .page-header-alpha {
     -webkit-box-pack: start;
@@ -179,7 +175,7 @@ p {
 }
 
 
-/* a. Page cover */
+/*------------------------------------- Page Cover -----------------------------------------------------*/
 
 .page-cover {
     width: 100%;
@@ -383,10 +379,7 @@ p {
 }
 
 
-/*------------------------------------------------------------------------------------------*/
-
-
-/* 3 Page footer / page-footer */
+/*-----------------------------------------Footer-------------------------------------------------*/
 
 .page-footer .footer-left,
 .page-footer .footer-right {
@@ -467,7 +460,7 @@ p {
 }
 
 
-/*------------------------------------------------------------------------------------------*/
+/*----------------------------------------Logo--------------------------------------------------*/
 
 .section-content img.logo {
     height: 96px;
@@ -492,6 +485,9 @@ p {
     }
 }
 
+
+/*------------------------------------- Centger-vh title-desc--------------------------------------------*/
+
 .title-desc {
     margin-bottom: 2rem;
 }
@@ -508,6 +504,9 @@ p {
     -ms-flex-pack: center;
     justify-content: center;
 }
+
+
+/*------------------------------------- Buttons -----------------------------------------------------*/
 
 .btn {
     padding: 0.75rem 1.5rem;
@@ -577,7 +576,15 @@ p {
 }
 
 
-/*------------------------------------------------------------------------------------------*/
+/*--------------------------------------------Layouts----------------------------------------------*/
+
+.container-fluid {
+    max-width: 96%;
+    height: 100%;
+    position: relative;
+    /* touch-action: none; */
+    transform: translate3d(0px, 0px, 0px);
+}
 
 @media (min-width: 992px) {
     body {
@@ -614,6 +621,9 @@ section.resume-section .resume-item .resume-date {
     }
 }
 
+
+/*------------------------------------- List icons -----------------------------------------------------*/
+
 .list-icons {
     font-size: 2.5rem;
 }
@@ -622,6 +632,9 @@ section.resume-section .resume-item .resume-date {
     color: #E00814;
     cursor: pointer;
 }
+
+
+/*------------------------------------- Services -----------------------------------------------------*/
 
 .media {
     min-height: 120px;
@@ -645,12 +658,8 @@ hr {
     border-top: 2px solid rgb(255, 255, 255);
 }
 
-.collapse.show {
-    background-color: #18273B;
-    -webkit-transition: background-color 100ms ease-in;
-    -ms-transition: background-color 100ms ease-in;
-    transition: background-color 100ms ease-in;
-}
+
+/*------------------------------------- scrolldown -----------------------------------------------------*/
 
 .scrolldown {
     position: absolute;
@@ -735,12 +744,4 @@ hr {
 .scrolldown a:hover:before {
     bottom: 38px;
     background: #ffffff;
-}
-
-.container-fluid {
-    max-width: 96%;
-    height: 100%;
-    position: relative;
-    /* touch-action: none; */
-    transform: translate3d(0px, 0px, 0px);
 }
