@@ -8,6 +8,7 @@
 (function($) {
 
     $.fn.initForm = function(options) {
+
         var settings = $.extend({
             type: 'post',
             serverUrl: "https://api.sparkpost.com/api/v1/transmissions",
@@ -30,59 +31,18 @@
                     form_data[this.name] = $(this).val();
                 });
 
-                var bodyajax = {
-                    "options": {
-                        "sandbox": true
-                    },
-                    "content": {
-                        "from": form_data.email,
-                        "subject": form_data.name,
-                        "text": form_data.message
-                    },
-                    "recipients": [{ "address": "williandres8@gmail.com" }]
+                var templateParams = {
+                    from_email: form_data.email,
+                    name_send: form_data.name,
+                    message_html: form_data.message
                 };
 
-                $.ajax({
-                    headers: {
-                        "Authorization": '6db87277bd6b4655b9ef0ed5d873ecd109de4e3a'
-                    },
-                    url: settings.serverUrl,
-                    type: settings.type,
-                    data: bodyajax,
-                    dataType: 'json',
-
-                    /* CALLBACK FOR SENDING EMAIL GOEAS HERE */
-                    success: function(data) {
-                        //Ajax connexion was a success, now handle response
-                        if (data && !data.error) {
-                            // Hide for if no error
-                            settings.successClean.val("");
-                            settings.successInvisible.addClass('invisible');
-                            settings.successGone.addClass('gone');
-                            settings.successVisible.removeClass('invisible');
-                            settings.successVisible.removeClass('gone');
-                            console.log('Request sent successfully');
-                        }
-                        // Else the login credentials were invalid.
-                        else {
-                            //Ajax connexion reject an error a success, now handle response
-                            settings.textFeedback.removeClass('gone');
-                            settings.textFeedback.removeClass('invisible');
-                            settings.textFeedback.html('Error when sending request.');
-                            console.log('Could not process AJAX request to server');
-                        }
-                    },
-                    /* show error message */
-                    error: function(jqXHR, textStatus, errorThrown) {
-                            //ajax error
-                            settings.textFeedback.removeClass('gone');
-                            settings.textFeedback.removeClass('invisible');
-                            settings.textFeedback.html('Error when sending request.');
-                            console.log('ajax error');
-
-                        }
-                        /* END EMAIL SENDING CALLBACK */
-                });
+                emailjs.send('gmail-widres', 'template_sIdSKKNP', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                    });
             }
 
         };
@@ -109,6 +69,7 @@
             // prevent default submit
             console.log('Send request');
             event.preventDefault();
+
             // use jquery validator plugin if it is enabled
             if (jQuery.validator) {
                 if ($(this).valid()) {

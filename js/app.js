@@ -27,6 +27,8 @@
     });
 
     // init contact form
+    emailjs.init("user_W09P5tea0Imck0MgFk76k");
+
     var sendMessageForm = $('.send_message_form');
     // Default server url
     var messageServerUrl = 'https://api.sparkpost.com/api/v1/transmissions';
