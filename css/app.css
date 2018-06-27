@@ -740,6 +740,6 @@ hr {
 .container-fluid {
     height: 100%;
     position: relative;
-    touch-action: none;
+    /* touch-action: none; */
     transform: translate3d(0px, 0px, 0px);
 }
