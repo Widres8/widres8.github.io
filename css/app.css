@@ -738,6 +738,7 @@ hr {
 }
 
 .container-fluid {
+    max-width: 96%;
     height: 100%;
     position: relative;
     /* touch-action: none; */
