@@ -38,7 +38,8 @@ li {
     margin: 0;
 }
 
-a {
+a,
+a:hover {
     color: #FFC107;
     cursor: pointer;
 }
