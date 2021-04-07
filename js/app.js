@@ -26,10 +26,20 @@
         target: '#sideNav'
     });
 
-    // init contact form
-    emailjs.init("user_W09P5tea0Imck0MgFk76k");
+    var sendEmail = true;
 
-    var sendMessageForm = $('.send_message_form');
+    // init contact form
+   try {
+    emailjs.init("user_W09P5tea0Imck0MgFk76k");
+   } catch (error) {
+    sendEmail = false;
+   }
+   var sendMessageForm = $('.send_message_form');
+
+   if(!sendEmail) {
+    sendMessageForm.addClass('d-none');
+   }
+
     // Default server url
     var messageServerUrl = 'https://api.sparkpost.com/api/v1/transmissions';
 
