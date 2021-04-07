@@ -26,14 +26,14 @@
         target: '#sideNav'
     });
 
-    var sendEmail = true;
+    var sendEmail = false;
 
     // init contact form
-   try {
-    emailjs.init("user_W09P5tea0Imck0MgFk76k");
-   } catch (error) {
-    sendEmail = false;
-   }
+//    try {
+//     emailjs.init("user_W09P5tea0Imck0MgFk76k");
+//    } catch (error) {
+//     sendEmail = false;
+//    }
    var sendMessageForm = $('.send_message_form');
 
    if(!sendEmail) {
